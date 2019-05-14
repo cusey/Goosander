@@ -40,6 +40,8 @@ var processFile = function(){
 
 var previous = function(){
 	document.getElementById("message-answer").innerHTML  = "";
+	document.getElementById("answer").value = "";
+	
 
     if(counter_word == 0){             
 		counter_word = counter_row -1;
@@ -87,6 +89,7 @@ var show = function(){
 
 var next = function(){
 	document.getElementById("message-answer").innerHTML  = "";
+	document.getElementById("answer").value = "";
 
     if(counter_word == counter_row -1){
 		counter_word  = 0;
