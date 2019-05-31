@@ -80,6 +80,12 @@ var check = function(){
 
 var showDefine  = function(){
 	document.getElementById("definition").innerHTML = dic[counter_word][2];
+	
+	document.getElementById("word").innerHTML = "";
+	document.getElementById("part-of-speech").innerHTML = "";
+	document.getElementById("word-usage").innerHTML = "";
+	document.getElementById("total-try-count").innerHTML = "";
+	document.getElementById("right-count").innerHTML = "";
 };
 
 var show = function(){
