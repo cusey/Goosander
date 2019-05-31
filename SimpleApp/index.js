@@ -78,6 +78,10 @@ var check = function(){
 	document.getElementById("message-count").innerHTML  = (counter_word +1) + " /" + ( counter_row );
 };
 
+var showDefine  = function(){
+	document.getElementById("definition").innerHTML = dic[counter_word][2];
+};
+
 var show = function(){
 	document.getElementById("word").innerHTML = dic[counter_word][0];
 	document.getElementById("part-of-speech").innerHTML = dic[counter_word][1];
