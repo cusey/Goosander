@@ -48,7 +48,36 @@ var previous = function(){
 	}else{
         counter_word = counter_word -1;
     }
-};           
+};   
+
+var sayDefine  = function(){
+
+	var definition = dic[counter_word][2];
+	
+	if('speechSynthesis' in window){
+          var speech = new SpeechSynthesisUtterance(definition);
+          speech.lang = 'en-US';
+          window.speechSynthesis.speak(speech);
+       }
+
+
+
+};
+var sayWordUsage  = function(){
+
+	var wordUsage = dic[counter_word][3];
+	
+	if('speechSynthesis' in window){
+          var speech = new SpeechSynthesisUtterance(wordUsage);
+          speech.lang = 'en-US';
+          window.speechSynthesis.speak(speech);
+       }
+
+
+
+};
+
+        
 
 var say = function(){
 	document.getElementById("message-answer").innerHTML  = "";
@@ -78,6 +107,7 @@ var check = function(){
 	document.getElementById("message-count").innerHTML  = (counter_word +1) + " /" + ( counter_row );
 };
 
+
 var showDefine  = function(){
 	document.getElementById("definition").innerHTML = dic[counter_word][2];
 	
@@ -87,6 +117,16 @@ var showDefine  = function(){
 	document.getElementById("total-try-count").innerHTML = "";
 	document.getElementById("right-count").innerHTML = "";
 };
+var showWordUsage  = function(){
+	document.getElementById("word-usage").innerHTML = dic[counter_word][3];
+	
+	document.getElementById("word").innerHTML = "";
+	document.getElementById("part-of-speech").innerHTML = "";
+	document.getElementById("definition").innerHTML = "";
+	document.getElementById("total-try-count").innerHTML = "";
+	document.getElementById("right-count").innerHTML = "";
+};
+
 
 var show = function(){
 	document.getElementById("word").innerHTML = dic[counter_word][0];
